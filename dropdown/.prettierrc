@@ -1,0 +1,25 @@
+{
+  "arrowParens": "avoid",
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "none",
+  "printWidth": 140,
+  "importOrder": ["^@components/(.*)$", "^@utils/(.*)$", "^@api/(.*)$", "^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "overrides": [
+    {
+      "files": ["*.html", "*.svg", "*.css"],
+      "options": {
+        "singleQuote": false
+      }
+    },
+    {
+      "files": ["*.json", ".stylelintrc"],
+      "options": {
+        "tabWidth": 2,
+        "parser": "json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+@import-normalize;
+:root {
+  --main-font-family: 'Inter';
+  --font-size-m: 16px;
+  --font-size-s: 14px;
+  --font-line-height: 20px;
+  --font-color: #333333;
+  --color-light-gray: #c1c1c1;
+  --color-lightest-gray: #f4f4f4;
+}
+
+body {
+  margin: 0;
+  font-family: var(--main-font-family);
+  color: var(--font-color);
+  background-color: var(--color-content-bg);
+  * {
+    box-sizing: border-box;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
