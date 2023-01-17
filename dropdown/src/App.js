@@ -8,7 +8,13 @@ function App() {
   const [selectedOption, setSelectedOptions] = useState([]);
   return (
     <div className={styles.App}>
-      <Dropdown label="Язык" options={DROPDOWN_LIST} setOptions={options => setSelectedOptions(options)} />
+      <Dropdown
+        isMultiSelect={true}
+        label="Язык"
+        withFlags={true}
+        options={DROPDOWN_LIST}
+        setOptions={options => setSelectedOptions(options)}
+      />
     </div>
   );
 }

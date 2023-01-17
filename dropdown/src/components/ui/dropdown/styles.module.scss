@@ -1,9 +1,11 @@
 .container {
   max-width: 400px;
+  margin: 0 auto;
   .searchBar {
     width: 100%;
     position: relative;
     padding-top: 25px;
+    margin-bottom: 5px;
     .label {
       position: absolute;
       top: 6px;
@@ -21,7 +23,8 @@
       padding-right: 26px;
       position: relative;
       border-radius: 10px;
-      min-height: 24px;
+      min-height: 40px;
+      display: flex;
       &::after {
         content: '';
         position: absolute;
@@ -33,6 +36,40 @@
         transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
       }
+      .inputItem {
+        padding: 6px 12px;
+        padding-right: 24px;
+        border-radius: 8px;
+        background-color: var(--color-lightest-gray);
+        font-size: var(--font-size-xs);
+        line-height: var(--font-line-height-s);
+        position: relative;
+        font-weight: 500;
+        &__close {
+          position: absolute;
+          right: 8px;
+          top: 9px;
+          width: 8px;
+          height: 8px;
+          cursor: pointer;
+          &::before {
+            position: absolute;
+            content: '';
+            width: 1px;
+            height: 8px;
+            background-color: var(--font-color);
+            transform: rotate(45deg);
+          }
+          &::after {
+            position: absolute;
+            content: '';
+            width: 1px;
+            height: 8px;
+            background-color: var(--font-color);
+            transform: rotate(-45deg);
+          }
+        }
+      }
     }
   }
   .dropdown {
@@ -43,9 +80,72 @@
     border-radius: 12px;
     &__search {
       width: 100%;
-      padding: 13px;
+      padding-left: 15px;
       background-color: var(--color-lightest-gray);
       border-radius: 10px;
+      border: none;
+      position: relative;
+      & input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        background: transparent;
+        padding: 13px;
+        outline: none;
+        color: var(--color-light-gray);
+        font-size: var(--font-size-m);
+        line-height: var(--font-line-height);
+      }
+      .icon {
+        position: absolute;
+        top: 16px;
+        left: 10px;
+      }
+    }
+    .dropContainer {
+      display: flex;
+      flex-direction: column;
+      .item {
+        padding: 18px 0px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        img {
+          width: 24px;
+          height: 24px;
+        }
+        .option {
+          display: flex;
+          align-items: center;
+          img {
+            margin-right: 10px;
+          }
+        }
+        .checkbox {
+          width: 24px;
+          height: 24px;
+          border: 2px solid var(--color-light-gray);
+          border-radius: 6px;
+          position: relative;
+          transition: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          &__active {
+            background-color: #005ffd;
+            border: 2px solid #005ffd;
+            &::after {
+              content: '';
+              position: absolute;
+              top: 2px;
+              left: 7px;
+              width: 4px;
+              height: 9px;
+              border: solid white;
+              border-width: 0 2px 2px 0;
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -31,7 +31,10 @@ const DROPDOWN_LIST = [
   }
 ];
 
-const FLAGS = {
+export default interface Iflags {
+  [key: string]: string;
+}
+const FLAGS: Iflags = {
   russian: 'https://purecatamphetamine.github.io/country-flag-icons/3x2/RU.svg',
   english: 'https://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg',
   polish: 'https://purecatamphetamine.github.io/country-flag-icons/3x2/PL.svg',
